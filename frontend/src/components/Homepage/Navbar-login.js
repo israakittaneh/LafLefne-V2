@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './A-Style.css';
 import { Button } from './LogoutButton';
-import Weather from "../weather/weather";
+import Weathertest from '../weather/weather-test'
+
 
 
 
@@ -64,7 +65,7 @@ function Navbar() {
                     </ul>
                     {button && <Button buttonStyle='btn--outline'>LOG OUT</Button>}
                 </div>
-                <Weather />
+                <Weathertest/>
             </nav>
         </>
     )
