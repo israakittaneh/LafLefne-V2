@@ -14,7 +14,6 @@ import Payment from './components/payment/payment'
 import MyTrip from './components/trips/mytrips'
 import Profile from './components/user/Profile';
 import Navbar2 from './components/Homepage/Navbar-login';
-import Weather from './components/weather/weather'
 
 
 class App extends React.Component {
@@ -106,6 +105,7 @@ class App extends React.Component {
   paymentCheck() {
     console.log('payment method')
   }
+  //const api = fetch('');
 
   render() {
 
@@ -138,7 +138,6 @@ class App extends React.Component {
       <>
         <Router>
           {nav}
-          {/* <Weather /> */}
           <Switch>
             {comp}
             <Route
@@ -149,8 +148,8 @@ class App extends React.Component {
               path="/trips"
               render={(props) => <Trips userid={this.state.userid} getup={this.getup} testtrips={this.state.testtrips} paymentCheck={this.paymentCheck} lable1={this.state.hello} trip={this.state.thetrip} />}
             />
-            {/* <Route path="/" exact component={Home} /> */}
-            {/* <Route path="/trips" exact component={Trips} /> */}
+            <Route path="/" exact component={Home} />
+            <Route path="/trips" exact component={Trips} />
             <Route path="/sign-up" exact component={Signup} />
             <Route path="/user" exact render={(props) => <Profile userid={this.state.userid} />}
             />
@@ -161,7 +160,6 @@ class App extends React.Component {
 
           </Switch>
           <Footer />
-
         </Router>
       </>
 
