@@ -24,14 +24,10 @@ class Weathertest extends Component {
             descreption: "",
             day: ""
         }
-        // var date ;
-        // var day = new Date(this.date)
+        
     }
 ​
-    // getWeather= async ()=>{
-    //     axios.get("http://api.openweathermap.org/data/2.5/forecast?q=Ramallah&appid=92c5ec943fed63edfcb280cc5b3b8af3")
-    //     .then()
-    // }
+   
 ​
 ​
 ​
