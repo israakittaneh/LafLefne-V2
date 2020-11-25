@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class CardItem extends React.Component {
@@ -15,38 +16,22 @@ class CardItem extends React.Component {
     render() {
         return (
 
-            // <>
-            //     <Card style={{ width: '18rem' }}>
-            //         <Link to={{
-            //             pathname: this.props.path,
-            //             state: {
-            //                 trip: this.props.trip
-            //             },
-            //             getup: this.props.getup,
-            //         }}>
-            //         <Card.Img variant="top"  src={this.props.src} />
-            //        <Card.Body>
-            //            <Card.Title> {this.props.label} </Card.Title>
-
-            //                  <Card.Text>
-            //                  {this.props.text}
-            //                   </Card.Text>
-
-            //         </Link>
-
-            //         <Button variant="primary">Go somewhere</Button>
-            //         </Card.Body>
-            //     </Card>
-            // </>
-
-            <Card style={{ width: '18rem' }}>
+            <Card>
+                {/* <Link to={{
+                    pathname: this.props.path,
+                    state: {
+                        trip: this.props.trip
+                    },
+                    getup: this.props.getup,
+                }}> */}
                 <Card.Img variant="top" src={this.props.src} />
+                {/* <Link /> */}
                 <Card.Body>
                     <Card.Title>{this.props.label}</Card.Title>
                     <Card.Text>
                         {this.props.text}
                     </Card.Text>
-                    <Button variant="outline-warning">CANCEL YOUR TRIP </Button>
+                    <Button id='button' variant="outline-warning">CANCEL YOUR TRIP </Button>
                 </Card.Body>
             </Card>
 
