@@ -143,7 +143,7 @@ class Weathertest extends Component {
 
             <div className="d-flex  flex-row-reverse" id="weather-comp">
                 <div class="input-group mb-3" id="weather">
-                    <form>
+                    <form className="weatherId">
                         <select onChange={this.getWeather} class="custom-select" id="inputGroupSelect01" >
                             {/* <option selected>Choose City</option> */}
                             <option value="Nablus">Nablus</option>
@@ -158,6 +158,8 @@ class Weathertest extends Component {
                             <option value="Gaza">Gaza</option>
                             <option value="Salfīt">Salfīt</option>
                         </select>
+
+                        <br />
 
                     </form>
                     <div id="WeatherDays">

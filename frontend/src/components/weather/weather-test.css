@@ -37,7 +37,9 @@ body {
 
 .card {
     border: 0;
-    border-radius: 2px
+    border-radius: 2px;
+    left: 250px;
+    top: 135px;
 }
 
 .card-weather {
@@ -127,6 +129,7 @@ p {
 
 .card-weather .card-body {
     background: #ffffff
+    
 }
 
 .card-weather .weakly-weather {
@@ -154,8 +157,14 @@ p {
     position: absolute; 
      right: 50px;
      top: 115px;
+     bottom: 50px;
      
  }
  #options{
      display: block;
+ }
+
+ .weatherId{
+     margin-right: -60px !important;
+     bottom: 100px;
  }
