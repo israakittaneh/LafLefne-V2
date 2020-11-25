@@ -21,6 +21,7 @@
     "mongodb": "^3.6.3",
     "mongoose": "^5.10.13",
     "nodemon": "^2.0.6",
+    "proxy": "^1.0.2",
     "react-slideshow-image": "^3.3.1"
   }
 }

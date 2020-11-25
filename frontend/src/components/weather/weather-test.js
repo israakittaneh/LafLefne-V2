@@ -12,7 +12,7 @@ class Weathertest extends Component {
         super()
         this.state = {
             temp:"",
-            date : "",
+            date : null,
             city : "",
             descreption:"",
             day:""
@@ -45,11 +45,11 @@ class Weathertest extends Component {
             )
             //this.day= data.list[0].dt 
             //console.log(new Date(this.day).getFullYear())
-         var fullDate = new Date(this.state.date).getDate()+' '  + new Date(this.state.date).getMonth() +' '+ new Date(this.state.date).getFullYear()+' ' ;
-         //console.log(fullDate)
-         this.setState({
-             day:fullDate
-         })
+        //  var fullDate = new Date(this.state.date).getDate()+' '  + new Date(this.state.date).getMonth() +' '+ new Date(this.state.date).getFullYear()+' ' ;
+         console.log(this.state)
+        //  this.setState({
+        //      day:fullDate
+        //  })
         
     }
     getWeather =async (e) => {
@@ -64,22 +64,25 @@ class Weathertest extends Component {
         this.setState(
             {city ,
             temp:(data.list[0].main.temp),
-             date:data.list[0].dt,
+             date:data.list[0].dt_txt,
              descreption:data.list[0].weather.description
             }
             )
+            console.log(data.list[0].dt_txt)
+            
             // var date1 = Math.floor((data.list[0].dt).getTime()/1000.0)
            // console.log(this.state)
             // console.log( date1)
 
             // console.log(data.list[0].weather[0].description)
-
-            
+            console.log(this.state)
       }
      
 
     render(){
        //console.log(this.day)
+       var fullDate = new Date(this.state.date).getDate()+' '  + new Date(this.state.date).getMonth() +' '+ new Date(this.state.date).getFullYear()+' ' ;
+
         return(
 
    
@@ -122,7 +125,7 @@ class Weathertest extends Component {
                     <div className="card-body">
                         <div className="weather-date-location">
                             <h3>Friday</h3>
-        <p className="text-gray"> <span className="weather-date">{this.state.day}</span><span className="weather-location">{this.state.city}, Palestine</span> </p>
+        <p className="text-gray"> <span className="weather-date">{fullDate}</span><span className="weather-location">{this.state.city}, Palestine</span> </p>
                         </div>
                         <div className="weather-data d-flex">
                             <div className="mr-auto">
