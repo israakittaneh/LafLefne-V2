@@ -65,7 +65,7 @@ function Navbar() {
                     </ul>
                     {button && <Button buttonStyle='btn--outline'>LOG OUT</Button>}
                 </div>
-                <Weathertest/>
+
             </nav>
         </>
     )
